@@ -8,7 +8,7 @@ resource "aws_vpc" "testing" {
 
 resource "aws_subnet" "test-subnet" {
     vpc_id = aws_vpc.testing.id
-    cidr_block = "192.168.1.0/27"
+    cidr_block = "192.168.1.32/27"
     tags = {
       "Name" = "Testing_Subnet" 
     }
@@ -17,7 +17,7 @@ resource "aws_subnet" "test-subnet" {
 resource "aws_instance" "server" {
     ami = var.myami
     instance_type = var.instype
-    subnet_id = aws_subnet.subnet1.id
+    subnet_id = aws_subnet.test-subnet.id
     tags = {
       "Name" = "webserver"
     }
