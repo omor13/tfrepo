@@ -4,6 +4,6 @@ variable "myami" {
 }
 
 variable "instype" {
-    default = "t2.micro"
+    default = "t2.nano"
     description = "Free Tier Instance"
 }
