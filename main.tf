@@ -22,3 +22,7 @@ resource "aws_instance" "server" {
       "Name" = "webserver"
     }
 }
+
+resource "aws_s3_bucket" "b1" {
+    bucket_prefix = "fadib1-bucket"
+}
