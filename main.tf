@@ -6,7 +6,7 @@ resource "aws_vpc" "testing" {
     }
 }
 
-resource "aws_subnet" "subnet1" {
+resource "aws_subnet" "test-subnet" {
     vpc_id = aws_vpc.testing.id
     cidr_block = "192.168.1.0/27"
     tags = {
